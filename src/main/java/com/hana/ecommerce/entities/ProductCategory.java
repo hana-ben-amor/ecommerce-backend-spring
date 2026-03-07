@@ -3,6 +3,7 @@ package com.hana.ecommerce.entities;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "product_category")
@@ -16,7 +17,7 @@ public class ProductCategory {
 
     // One category can have many products
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Product> products;
+    private Set<Product> products;
 
     // Constructors
     public ProductCategory() {}
@@ -31,6 +32,6 @@ public class ProductCategory {
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
-    public List<Product> getProducts() { return products; }
-    public void setProducts(List<Product> products) { this.products = products; }
+    public Set<Product> getProducts() { return products; }
+    public void setProducts(Set<Product> products) { this.products = products; }
 }

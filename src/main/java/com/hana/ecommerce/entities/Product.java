@@ -35,7 +35,7 @@ public class Product {
     private LocalDateTime lastUpdated;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_id",nullable = false)
     private ProductCategory category;
 
     // Constructors
