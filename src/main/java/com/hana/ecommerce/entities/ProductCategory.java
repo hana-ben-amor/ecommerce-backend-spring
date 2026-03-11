@@ -12,7 +12,7 @@ public class ProductCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "category_name") // maps this field to the actual DB column
     private String name;
 
     // One category can have many products
